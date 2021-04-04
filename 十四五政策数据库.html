@@ -1,0 +1,553 @@
+<!doctype html>
+<html>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+<title>十四五政策数据库</title><link href='https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; bottom: 0px; top: 0px; left: 0px; right: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-diagram-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.8; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.md-inline-math .MathJax_SVG .noError { display: none !important; }
+.html-for-mac .inline-math-svg .MathJax_SVG { vertical-align: 0.2px; }
+.md-math-block .MathJax_SVG_Display { text-align: center; margin: 0px; position: relative; text-indent: 0px; max-width: none; max-height: none; min-height: 0px; min-width: 100%; width: auto; overflow-y: hidden; display: block !important; }
+.MathJax_SVG_Display, .md-inline-math .MathJax_SVG_Display { width: auto; margin: inherit; display: inline-block !important; }
+.MathJax_SVG .MJX-monospace { font-family: var(--monospace); }
+.MathJax_SVG .MJX-sans-serif { font-family: sans-serif; }
+.MathJax_SVG { display: inline; font-style: normal; font-weight: 400; line-height: normal; zoom: 90%; text-indent: 0px; text-align: left; text-transform: none; letter-spacing: normal; word-spacing: normal; overflow-wrap: normal; white-space: nowrap; float: none; direction: ltr; max-width: none; max-height: none; min-width: 0px; min-height: 0px; border: 0px; padding: 0px; margin: 0px; }
+.MathJax_SVG * { transition: none 0s ease 0s; }
+.MathJax_SVG_Display svg { vertical-align: middle !important; margin-bottom: 0px !important; margin-top: 0px !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+mark .md-meta { color: rgb(0, 0, 0); opacity: 0.3 !important; }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-require-zoom-fix foreignobject { font-size: var(--mermaid-font-zoom); }
+
+
+:root {
+    --side-bar-bg-color: #fafafa;
+    --control-text-color: #777;
+}
+
+@include-when-export url(https://fonts.loli.net/css?family=Open+Sans:400italic,700italic,700,400&subset=latin,latin-ext);
+
+/* open-sans-regular - latin-ext_latin */
+  /* open-sans-italic - latin-ext_latin */
+    /* open-sans-700 - latin-ext_latin */
+    /* open-sans-700italic - latin-ext_latin */
+  html {
+    font-size: 16px;
+}
+
+body {
+    font-family: "Open Sans","Clear Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: rgb(51, 51, 51);
+    line-height: 1.6;
+}
+
+#write {
+    max-width: 860px;
+  	margin: 0 auto;
+  	padding: 30px;
+    padding-bottom: 100px;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1024px;
+	}
+}
+
+@media only screen and (min-width: 1800px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+#write > ul:first-child,
+#write > ol:first-child{
+    margin-top: 30px;
+}
+
+a {
+    color: #4183C4;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    line-height: 1.4;
+    cursor: text;
+}
+h1:hover a.anchor,
+h2:hover a.anchor,
+h3:hover a.anchor,
+h4:hover a.anchor,
+h5:hover a.anchor,
+h6:hover a.anchor {
+    text-decoration: none;
+}
+h1 tt,
+h1 code {
+    font-size: inherit;
+}
+h2 tt,
+h2 code {
+    font-size: inherit;
+}
+h3 tt,
+h3 code {
+    font-size: inherit;
+}
+h4 tt,
+h4 code {
+    font-size: inherit;
+}
+h5 tt,
+h5 code {
+    font-size: inherit;
+}
+h6 tt,
+h6 code {
+    font-size: inherit;
+}
+h1 {
+    font-size: 2.25em;
+    line-height: 1.2;
+    border-bottom: 1px solid #eee;
+}
+h2 {
+    font-size: 1.75em;
+    line-height: 1.225;
+    border-bottom: 1px solid #eee;
+}
+
+/*@media print {
+    .typora-export h1,
+    .typora-export h2 {
+        border-bottom: none;
+        padding-bottom: initial;
+    }
+
+    .typora-export h1::after,
+    .typora-export h2::after {
+        content: "";
+        display: block;
+        height: 100px;
+        margin-top: -96px;
+        border-top: 1px solid #eee;
+    }
+}*/
+
+h3 {
+    font-size: 1.5em;
+    line-height: 1.43;
+}
+h4 {
+    font-size: 1.25em;
+}
+h5 {
+    font-size: 1em;
+}
+h6 {
+   font-size: 1em;
+    color: #777;
+}
+p,
+blockquote,
+ul,
+ol,
+dl,
+table{
+    margin: 0.8em 0;
+}
+li>ol,
+li>ul {
+    margin: 0 0;
+}
+hr {
+    height: 2px;
+    padding: 0;
+    margin: 16px 0;
+    background-color: #e7e7e7;
+    border: 0 none;
+    overflow: hidden;
+    box-sizing: content-box;
+}
+
+li p.first {
+    display: inline-block;
+}
+ul,
+ol {
+    padding-left: 30px;
+}
+ul:first-child,
+ol:first-child {
+    margin-top: 0;
+}
+ul:last-child,
+ol:last-child {
+    margin-bottom: 0;
+}
+blockquote {
+    border-left: 4px solid #dfe2e5;
+    padding: 0 15px;
+    color: #777777;
+}
+blockquote blockquote {
+    padding-right: 0;
+}
+table {
+    padding: 0;
+    word-break: initial;
+}
+table tr {
+    border-top: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n),
+thead {
+    background-color: #f8f8f8;
+}
+table th {
+    font-weight: bold;
+    border: 1px solid #dfe2e5;
+    border-bottom: 0;
+    margin: 0;
+    padding: 6px 13px;
+}
+table td {
+    border: 1px solid #dfe2e5;
+    margin: 0;
+    padding: 6px 13px;
+}
+table th:first-child,
+table td:first-child {
+    margin-top: 0;
+}
+table th:last-child,
+table td:last-child {
+    margin-bottom: 0;
+}
+
+.CodeMirror-lines {
+    padding-left: 4px;
+}
+
+.code-tooltip {
+    box-shadow: 0 1px 1px 0 rgba(0,28,36,.3);
+    border-top: 1px solid #eef2f2;
+}
+
+.md-fences,
+code,
+tt {
+    border: 1px solid #e7eaed;
+    background-color: #f8f8f8;
+    border-radius: 3px;
+    padding: 0;
+    padding: 2px 4px 0px 4px;
+    font-size: 0.9em;
+}
+
+code {
+    background-color: #f3f4f4;
+    padding: 0 2px 0 2px;
+}
+
+.md-fences {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 8px;
+    padding-bottom: 6px;
+}
+
+
+.md-task-list-item > input {
+  margin-left: -1.3em;
+}
+
+@media print {
+    html {
+        font-size: 13px;
+    }
+    table,
+    pre {
+        page-break-inside: avoid;
+    }
+    pre {
+        word-wrap: break-word;
+    }
+}
+
+.md-fences {
+	background-color: #f8f8f8;
+}
+#write pre.md-meta-block {
+	padding: 1rem;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f7f7f7;
+    border: 0;
+    border-radius: 3px;
+    color: #777777;
+    margin-top: 0 !important;
+}
+
+.mathjax-block>.code-tooltip {
+	bottom: .375rem;
+}
+
+.md-mathjax-midline {
+    background: #fafafa;
+}
+
+#write>h3.md-focus:before{
+	left: -1.5625rem;
+	top: .375rem;
+}
+#write>h4.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h5.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+#write>h6.md-focus:before{
+	left: -1.5625rem;
+	top: .285714286rem;
+}
+.md-image>.md-meta {
+    /*border: 1px solid #ddd;*/
+    border-radius: 3px;
+    padding: 2px 0px 0px 4px;
+    font-size: 0.9em;
+    color: inherit;
+}
+
+.md-tag {
+    color: #a7a7a7;
+    opacity: 1;
+}
+
+.md-toc { 
+    margin-top:20px;
+    padding-bottom:20px;
+}
+
+.sidebar-tabs {
+    border-bottom: none;
+}
+
+#typora-quick-open {
+    border: 1px solid #ddd;
+    background-color: #f8f8f8;
+}
+
+#typora-quick-open-item {
+    background-color: #FAFAFA;
+    border-color: #FEFEFE #e5e5e5 #e5e5e5 #eee;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/** focus mode */
+.on-focus-mode blockquote {
+    border-left-color: rgba(85, 85, 85, 0.12);
+}
+
+header, .context-menu, .megamenu-content, footer{
+    font-family: "Segoe UI", "Arial", sans-serif;
+}
+
+.file-node-content:hover .file-node-icon,
+.file-node-content:hover .file-node-open-state{
+    visibility: visible;
+}
+
+.mac-seamless-mode #typora-sidebar {
+    background-color: #fafafa;
+    background-color: var(--side-bar-bg-color);
+}
+
+.md-lang {
+    color: #b4654d;
+}
+
+.html-for-mac .context-menu {
+    --item-hover-bg-color: #E6F0FE;
+}
+
+#md-notification .btn {
+    border: 0;
+}
+
+.dropdown-menu .divider {
+    border-color: #e5e5e5;
+}
+
+.ty-preferences .window-content {
+    background-color: #fafafa;
+}
+
+.ty-preferences .nav-group-item.active {
+    color: white;
+    background: #999;
+}
+
+ :root {--mermaid-font-zoom:1.25em ;} 
+</style>
+</head>
+<body class='typora-export os-windows'>
+<div id='write'  class=''><h1><a name="四川农业农村规划资料库" class="md-header-anchor"></a><span>四川农业农村规划资料库</span></h1><p><strong><span>目  录</span></strong></p><div class='md-toc' mdtype='toc'><p class="md-toc-content" role="list"><span role="listitem" class="md-toc-item md-toc-h1" data-ref="n6"><a class="md-toc-inner" href="#四川农业农村规划资料库">四川农业农村规划资料库</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n47"><a class="md-toc-inner" href="#一政策与文件">一、政策与文件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n229"><a class="md-toc-inner" href="#一）政策文件">（一）政策文件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n16"><a class="md-toc-inner" href="#二）统计数据">（二）统计数据</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n326"><a class="md-toc-inner" href="#三）规划方案">（三）规划方案</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n421"><a class="md-toc-inner" href="#二新闻与分析">二、新闻与分析</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n248"><a class="md-toc-inner" href="#01-三农新闻">01 三农新闻</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n255"><a class="md-toc-inner" href="#02-综合解读">02 综合解读</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n420"><a class="md-toc-inner" href="#三专题内容">三、专题内容</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n258"><a class="md-toc-inner" href="#一）解读2021年中央一号文件">（一）解读2021年中央一号文件</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n162"><a class="md-toc-inner" href="#二）巩固脱贫攻坚成果">（二）巩固脱贫攻坚成果</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n188"><a class="md-toc-inner" href="#三）全面实施乡村振兴战略">（三）全面实施乡村振兴战略</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n404"><a class="md-toc-inner" href="#四）推进农业高质量发展">（四）推进农业高质量发展</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n339"><a class="md-toc-inner" href="#01-现代农业园区">01 现代农业园区</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n346"><a class="md-toc-inner" href="#02-现代农业103产业体系">02 现代农业“10+3”产业体系</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n330"><a class="md-toc-inner" href="#03-粮食生猪等重要农产品">03 粮食、生猪等重要农产品</a></span><span role="listitem" class="md-toc-item md-toc-h4" data-ref="n423"><a class="md-toc-inner" href="#04-农业工作重点">04 农业工作重点</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n333"><a class="md-toc-inner" href="#五）实施乡村建设行动">（五）实施乡村建设行动</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n616"><a class="md-toc-inner" href="#六）推动乡村人才振兴">（六）推动乡村人才振兴</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n534"><a class="md-toc-inner" href="#七）成渝地区双城经济圈">（七）成渝地区双城经济圈</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n770"><a class="md-toc-inner" href="#四案例与经验">四、案例与经验</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n537"><a class="md-toc-inner" href="#一）乡村振兴案例">（一）乡村振兴案例</a></span><span role="listitem" class="md-toc-item md-toc-h3" data-ref="n641"><a class="md-toc-inner" href="#二）农村改革案例">（二）农村改革案例</a></span><span role="listitem" class="md-toc-item md-toc-h2" data-ref="n773"><a class="md-toc-inner" href="#五发展报告">五、发展报告</a></span></p></div><h2><a name="一政策与文件" class="md-header-anchor"></a><span>一、政策与文件</span></h2><h3><a name="一）政策文件" class="md-header-anchor"></a><span>（一）政策文件</span></h3><p><a href='http://www.gov.cn/zhengce/zhengcewenjianku/index.htm'><span>国务院政策文件库</span></a></p><p><a href='https://article.xuexi.cn/news/index.html?study_style_id=feeds_pure&amp;pid=&amp;ptype=-1&amp;source=share&amp;share_to=copylink#/special-topic/19748628094228952'><span>学习强国2021年文件库</span></a></p><p><a href='http://www.moa.gov.cn/gk/zcfg/'><span>农业农村部政策法规</span></a></p><p><a href='http://www.cpad.gov.cn/col/col1461/index.html'><span>国家乡村振兴局政策文件</span></a></p><p><a href='http://www.forestry.gov.cn/main/5460/index.html'><span>国家林业和草原局政策公告</span></a></p><p><a href='http://www.sc.gov.cn/10462/c103041/newzfwj.shtml'><span>四川省人民政府政策文件库</span></a></p><p><a href='http://nynct.sc.gov.cn/nynct/c100664/nav_list.shtml'><span>四川省农业农村厅政策文件库</span></a></p><h3><a name="二）统计数据" class="md-header-anchor"></a><span>（二）统计数据</span></h3><p><a href='http://www.stats.gov.cn/tjsj/tjbz/tjyqhdmhcxhfdm/2018/index.html'><span>2018年区划代码和城乡划分代码（精确到村）</span></a></p><p><a href='http://www.stats.gov.cn/tjsj/tjbz/202012/P020201216327981867720.doc'><span>农业及相关产业统计分类（2020）</span></a></p><p><a href='https://data.stats.gov.cn/'><span>国家统计数据</span></a></p><p><a href='http://tjj.sc.gov.cn/scstjj/c105852/sjtj.shtml'><span>四川统计数据</span></a></p><p><a href='http://www.scdfz.org.cn/szfz/scsz1/dyl'><span>四川省地方志网（志书与年鉴）</span></a></p><h3><a name="三）规划方案" class="md-header-anchor"></a><span>（三）规划方案</span></h3><p><a href='http://www.gov.cn/xinwen/2021-03/13/content_5592681.htm'><span>《中华人民共和国国民经济和社会发展第十四个五年规划和2035年远景目标纲要》</span></a></p><p><a href='http://www.moa.gov.cn/xw/zwdt/201809/t20180926_6159028.htm'><span>《全国乡村振兴战略规划（2018－2022年）》</span></a></p><p><a href='http://www.moa.gov.cn/govpublic/XZQYJ/202007/t20200716_6348795.htm?keywords=+%E3%80%8A%E5%85%A8%E5%9B%BD%E4%B9%A1%E6%9D%91%E4%BA%A7%E4%B8%9A%E5%8F%91%E5%B1%95%E8%A7%84%E5%88%92%EF%BC%882020-2025%E5%B9%B4%EF%BC%89%E3%80%8B'><span>《全国乡村产业发展规划（2020-2025年）》</span></a></p><p><a href='https://mp.weixin.qq.com/s/OKSX0R8JLYeD6FreHLDrKw'><span>《四川省国民经济和社会发展第十四个五年规划和二〇三五年远景目标纲要》</span></a></p><p><a href='http://www.scqs.gov.cn/info/7765/128197.htm'><span>《四川省乡村振兴战略规划（2018－2022年）》</span></a></p><p><a href='https://mp.weixin.qq.com/s/HzgvEz99qnd7URuK8MBJbA'><span>《成都市国民经济和社会发展第十四个五年规划和二〇三五年远景目标纲要》</span></a></p><p><a href='http://www.gov.cn/zhengce/2019-05/16/content_5392269.htm'><span>《数字乡村发展战略纲要》</span></a></p><p>&nbsp;</p><h2><a name="二新闻与分析" class="md-header-anchor"></a><span>二、新闻与分析</span></h2><h3><a name="01-三农新闻" class="md-header-anchor"></a><span>01 三农新闻</span></h3><p><a href='https://app.cctv.com/special/m/livevod/index.html?guid=&amp;vtype=2&amp;vsetId=VSET100477447669'><span>中国三农报道(CCTV17新闻)</span></a></p><p><a href='http://www.sctv.com/show/scxcxw/'><span>四川乡村新闻(四川乡村频道)</span></a></p><h3><a name="02-综合解读" class="md-header-anchor"></a><span>02 综合解读</span></h3><p><a href='https://space.bilibili.com/679619486/'><span>国仁全球大学（温铁军团队）</span></a></p><p>&nbsp;</p><h2><a name="三专题内容" class="md-header-anchor"></a><span>三、专题内容</span></h2><h3><a name="一）解读2021年中央一号文件" class="md-header-anchor"></a><span>（一）解读2021年中央一号文件</span></h3><p><a href='http://www.gov.cn/zhengce/2021-02/22/content_5588136.htm'><span>中央农办主任、农业农村部部长唐仁健解读中央一号文件</span></a></p><p><a href='https://www.bilibili.com/video/BV1YK4y1S7ZJ'><span>温铁军解读2020年中央一号文件</span></a></p><p><a href='https://www.bilibili.com/video/BV1Xv411Y7bv'><span>农视网《三农三人谈》</span></a></p><h3><a name="二）巩固脱贫攻坚成果" class="md-header-anchor"></a><span>（二）巩固脱贫攻坚成果</span></h3><p><a href='https://article.xuexi.cn/articles/video/index.html?art_id=14103895641141631435&amp;part_id=3595957126816711446&amp;study_style_id=video_default&amp;showmenu=false&amp;source=share&amp;share_to=wx_single'><span>纪录片：《摆脱贫困》</span></a></p><p><a href='https://article.xuexi.cn/articles/video/index.html?art_id=5662094321600305400&amp;part_id=7420429173491765770&amp;study_style_id=video_default&amp;showmenu=false&amp;source=share&amp;share_to=wx_single'><span>记录片：《告别贫困》</span></a></p><p><a href='http://www.gov.cn/zhengce/2021-03/22/content_5594969.htm'><span>《中共中央 国务院关于实现巩固拓展脱贫攻坚成果同乡村振兴有效衔接的意见》</span></a></p><p><span> </span><a href='https://mp.weixin.qq.com/s/8R2KDwmGMW3BhcK5bRqmhg'><span>2020年后我国相对贫困标准：经验实践与理论</span></a></p><h3><a name="三）全面实施乡村振兴战略" class="md-header-anchor"></a><span>（三）全面实施乡村振兴战略</span></h3><p><a href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/44687/44916/index.htm'><span>国新办-全面推进乡村振兴加快农业农村现代化发布会</span></a></p><p><a href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/44687/44736/index.htm'><span>国新办-落实五中全会精神全面推进乡村振兴发布会</span></a></p><p><a href='http://www.sc.gov.cn/10462/10464/10727/10866/2020/1/20/00ffd45806414afcbda3cd05ce568c65.shtml'><span>2019年度四川省实施乡村振兴战略先进县（市、区）、先进乡镇、示范村</span></a></p><p><a href='http://www.sc.gov.cn/10462/10464/10797/2021/2/20/f0ede54517514b3f96ffacd8de2ae6fd.shtml'><span>2020年度四川省乡村振兴先进县（市、区）、先进乡镇、示范村</span></a></p><p><a href='http://www.gov.cn/zhengce/zhengceku/2021-03/31/content_5596927.htm'><span>《中央财政衔接推进乡村振兴补助资金管理办法》</span></a></p><p><a href='https://www.baidu.com/link?url=34HkzvDMXxk8TUvwvlDNq-A77MVxF08Dvwau5feHKP0c0CErCu8SbrORgZmQRtGEP0NzdSMeE46oUHUr5BQFOI2Fcyz8Ax0LXsBAGQlNLBxCfl2Q3ik3KLlhuXXytDVn&amp;wd=&amp;eqid=b0f0fb4600077c960000000660683ff8'><span>《中华人民共和国乡村振兴促进法（草案）》</span></a></p><p><a href='https://www.bilibili.com/video/BV1LK411g7ie'><span>温铁军-乡村振兴战略是中国应对全球化挑战的压舱石</span></a></p><h3><a name="四）推进农业高质量发展" class="md-header-anchor"></a><span>（四）推进农业高质量发展</span></h3><h4><a name="01-现代农业园区" class="md-header-anchor"></a><span>01 现代农业园区</span></h4><p><a href='http://www.moa.gov.cn/xw/zwdt/201812/t20181230_6165876.htm'><span>第一批国家现代农业产业园名单</span></a></p><p><a href='http://www.moa.gov.cn/xw/zxfb/201912/t20191210_6333045.htm'><span>第二批国家现代农业产业园名单</span></a></p><p><a href='https://baijiahao.baidu.com/s?id=1686048592411047748&amp;wfr=spider&amp;for=pc'><span>第三批国家现代农业产业园名单</span></a></p><p><a href='http://www.sc.gov.cn/10462/10464/10727/10866/2020/1/20/00ffd45806414afcbda3cd05ce568c65.shtml'><span>2019年度四川省星级现代农业园区</span></a></p><p><a href='http://www.sc.gov.cn/10462/10464/13298/13301/2021/2/19/c76fe24394ef4c9abe2a9c0c6fdd2df8.shtml'><span>2020年度四川省星级现代农业园区</span></a></p><p><a href='http://www.scnj.gov.cn/oldfiles/njxxxgk/2018/11/13/20181113172619-887305.pdf'><span>四川省现代农业园区建设考评激励方案</span></a></p><h4><a name="02-现代农业103产业体系" class="md-header-anchor"></a><span>02 现代农业“10+3”产业体系</span></h4><p><a href='http://www.sc.gov.cn/10462/10464/10797/2019/10/8/592fbfbd1bb649279d70c7ee1907ebac.shtml'><span>关于加快建设现代农业“10+3”产业体系 推进农业大省向农业强省跨越的意见</span></a></p><h4><a name="03-粮食生猪等重要农产品" class="md-header-anchor"></a><span>03 粮食、生猪等重要农产品</span></h4><p><a href='http://www.gov.cn/xinwen/2020-05/22/content_5513939.htm'><span>两会-农业农村部部长韩长赋“部长通道”答记者问(文字)</span></a></p><p><a href='http://tv.cctv.com/2021/03/05/VIDEtG2moYCXs5edQiiBdldR210305.shtml'><span>两会-农业农村部部长韩长赋“部长通道”答记者问(视频)</span></a></p><p><a href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/44687/45200/wz45202/Document/1701488/1701488.htm'><span>国新办-“十四五”时期粮食和物资储备发展情况发布会</span></a></p><h4><a name="04-农业工作重点" class="md-header-anchor"></a><span>04 农业工作重点</span></h4><p><a href='http://www.moa.gov.cn/govpublic/FZJHS/202102/t20210225_6362310.htm'><span>农业农村部2021年一号文件：关于落实好党中央、国务院2021年农业农村重点工作部署的实施意见</span></a></p><h3><a name="五）实施乡村建设行动" class="md-header-anchor"></a><span>（五）实施乡村建设行动</span></h3><p><a href='http://www.gov.cn/zhengce/2019-05/05/content_5388880.htm'><span>中共中央 国务院关于建立健全城乡融合发展体制机制和政策体系的意见</span></a></p><p><a href='http://www.scio.gov.cn/xwfbh/xwbfbh/wqfbh/44687/44916/zy44920/Document/1698962/1698962.htm'><span>国新办-实施好乡村建设行动 推进城乡融合发展</span></a></p><p><a href='https://www.bilibili.com/video/BV13y4y1H7dR'><span>温铁军-乡村建设与县域经济</span></a></p><p><a href='https://www.bilibili.com/video/BV11r4y1K7gj'><span>张孝德-构建新型工农城乡关系与乡村建设行动解读</span></a></p><h3><a name="六）推动乡村人才振兴" class="md-header-anchor"></a><span>（六）推动乡村人才振兴</span></h3><p><a href='http://www.gov.cn/xinwen/2021-02/23/content_5588496.htm'><span>《关于加快推进乡村人才振兴的意见》</span></a></p><h3><a name="七）成渝地区双城经济圈" class="md-header-anchor"></a><span>（七）成渝地区双城经济圈</span></h3><p><a href='http://www.sc.gov.cn/10462/10464/10797/2020/7/16/58ce4e9ca30d45cfb26af532398f702e.shtml'><span>《中共四川省委关于深入贯彻习近平总书记重要讲话精神加快推动成渝地区双城经济圈建设的决定》</span></a></p><p>&nbsp;</p><h2><a name="四案例与经验" class="md-header-anchor"></a><span>四、案例与经验</span></h2><h3><a name="一）乡村振兴案例" class="md-header-anchor"></a><span>（一）乡村振兴案例</span></h3><p><a href='https://mp.weixin.qq.com/s/GM78mUgnBa4SfuUqkGE55w'><span>2021年中央一号文件提出全面推进乡村振兴！这十个案例可以借鉴！</span></a></p><h3><a name="二）农村改革案例" class="md-header-anchor"></a><span>（二）农村改革案例</span></h3><p>&nbsp;</p><h2><a name="五发展报告" class="md-header-anchor"></a><span>五、发展报告</span></h2><p><a href='http://www.moa.gov.cn/xw/zwdt/202011/P020201129305930462590.pdf'><span>中国数字乡村发展报告(2020年)</span></a></p><p><a href='https://zgxczxn.agri.cn/zgxczxShare/messageShare.jsp?newsId=22541'><span>全国县域数字农业农村发展水平评价报告(2020年)</span></a></p><p><a href='https://mp.weixin.qq.com/s/BH3xplfS_krIf_4ELLPSiQ'><span>中国食用菌产业大数据报告</span></a></p><p><a href='https://haokan.baidu.com/v?vid=7774551835425145413'><span>电视专题片：走在希望的田野上（四川农业发展）</span></a></p></div>
+</body>
+</html>
